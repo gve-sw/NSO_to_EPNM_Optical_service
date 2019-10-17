@@ -1,0 +1,27 @@
+{
+  "device:device": [
+    {
+      "name": "{{ name }}",
+      "address": "{{ ip_address }}",
+      "port": "{{ port }}",
+      "authgroup": "epnm",
+      "device-type": {
+        "generic": {
+          "ned-id": "cisco-epnm-gen-1.0:cisco-epnm-gen-1.0"
+        }
+      },
+      "ned-settings": {
+        "taif-ned-cisco-epnm-meta:cisco-epnm": {
+          "ssl": {
+            "accept-any": "true"
+          }
+        }
+      },
+      "state": {
+        "admin-state": "unlocked"
+        }
+    }
+  ]
+}
+
+

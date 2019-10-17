@@ -1,0 +1,13 @@
+{
+ "patch-cord-list:patch-cord-list": [
+   {
+     "ND": "{{ site_name }}",
+     "a-end": "{{ start_point }}",
+     "z-end": "{{ end_point }}",
+     "direction": "UNIDIRECTIONAL",
+     "type": "CTP",
+     "lr": "lr-optical-section"
+   }
+ ]
+}
+

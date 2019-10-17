@@ -1,0 +1,43 @@
+{
+  "services:services": [
+    {
+      "service-name": "{{ name }}",
+      "service-description": "{{ name }}",
+      "admin-state": "UP",
+      "ignore-path-alarm": "true",
+      "restoration": "NONE",
+      "revert": "NONE",
+      "service-type": "optical",
+      "service-subtype": "OCHCC",
+      "label": "{{ name }}",
+      "validation": "NONE",
+      "up-stream-channel-power-offset": "0.0",
+      "down-stream-channel-power-offset": "0.0",
+      "frequency": "1530.30",
+      "optical-threshold": "GREEN",
+      "optical-threshold-protected": "GREEN",
+      "optical-threshold-restoration": "GREEN",
+      "optical-threshold-restoration-protected": "GREEN",
+      "termination-point-list": {
+        "termination-point-config": [
+          {
+        	"ND": "{{ start_point }}",
+        	"type": "CTP",
+        	"discovered-name": "{{ start_link }}",
+        	"lr": "lr-dsr-10gigabit-ethernet",
+            "directionality": "source"
+          },
+          {
+        	"ND": "{{ end_point }}",
+        	"type": "CTP",
+        	"discovered-name": "{{ end_link }}",
+        	"lr": "lr-dsr-10gigabit-ethernet",
+            "directionality": "sink"
+          }
+        ]
+      }
+    }
+  ]
+}
+
+
