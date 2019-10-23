@@ -4,6 +4,12 @@ A python script to create and delete optical services (OCHCC) through REST API c
 
 ![](nso_epnm_2.png)
 
+The python "create_service.py" script will create the necessary internal patchcords for the deployment of the OCHCC service.  The site names, endpoints, links and service names need to be modified to your specific EPNM parameters.  I have left my parameters for reference in the code.  The python script uses the NSO APIs to send the necessary parameters from the json templates to NSO.  NSO utilizes an EPN-M NED to communicate the parameters to create the patchcords and deploy the service over the patchcords links.  
+
+The python "delete_service.py" script will delete the service and remove the internal patchcords.  The service names, links, endpoints and site names need to be modified to your specific EPNM parameters.  Again I have left my parameters for reference in the code.  The delete operation is the same as the create but the necessary parameters for the NSO API to perform the operation is less.  
+
+
+
 ## Contacts:
 * Jason Mah (jamah@cisco.com)
 
@@ -11,6 +17,7 @@ A python script to create and delete optical services (OCHCC) through REST API c
 * Python3
 * NSO
 * EPN-M
+* NSO NEDs - EPN-M package 1.0.4 or above
 
 
 # Installation
